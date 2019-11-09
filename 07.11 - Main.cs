@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         public static void CallComputerInfo(Computer comp)
         {
-            comp.GetInfo();
+            comp.PrintInfo();
         }
         static void Main(string[] args)
         {
@@ -23,7 +23,7 @@ namespace ConsoleApp1
             computer1.MonitorHeight = 1080;
             Computer Clone = computer1.Clone();
             CallComputerInfo(computer1);
-            Console.WriteLine(computer1.Area());
+            Console.WriteLine(computer1.GetArea());
             CallComputerInfo(Clone);
             //CallComputerInfo(computer2);
 
