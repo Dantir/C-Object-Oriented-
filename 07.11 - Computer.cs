@@ -9,20 +9,23 @@ namespace ConsoleApp1
     public enum Color { Black = 1, Gray = 2, White = 3 }
     public class Computer
     {
-        /*public Computer(double MonitorWidth, double MonitorHeight)
+        public Computer(double MonitorWidth, double MonitorHeight)
            {
                Colorname = Color.Black;
                Brand = "Undefined";
                this.MonitorWidth = MonitorWidth;
                this.MonitorHeight = MonitorHeight;
-           }*/
-        /*public Computer(Color Colorname, string Brand, double MonitorWidth, double MonitorHeight)
+           }
+        public Computer(Color Colorname, string Brand, double MonitorWidth, double MonitorHeight)
         {
             this.Colorname = Colorname;
             this.Brand = Brand;
             this.MonitorWidth = MonitorWidth;
             this.MonitorHeight = MonitorHeight;
-        }*/
+        }
+        public Computer()
+        {
+        }
         private Color colorname;
         public Color Colorname
         {
@@ -65,11 +68,11 @@ namespace ConsoleApp1
                 { Console.WriteLine("Invalid data (Number should be positive!)"); }
             }
         }
-        public void GetInfo()
+        public void PrintInfo()
         {
             Console.WriteLine("\nThe brand is " + Brand + "\nThe color is " + Colorname + "\nThe resolution is " + MonitorWidth + " x " + MonitorHeight);
         }
-        public double Area()
+        public double GetArea()
         {
             return (MonitorWidth * MonitorHeight);
         }
