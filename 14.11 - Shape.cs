@@ -11,12 +11,31 @@ namespace ConsoleApp1
             return "Area ->" + 0;
         }
     }
-    public class Square : Shape
+       public class Rectangle : Shape
+    {
+        public int Height { get; private set; }
+        public int Width { get; private set; }
+        public Rectangle(int height, int width)
+        {
+            Height = height;
+            Width = width;
+        }
+        public int size { get; private set; }
+        public override double GetArea()
+        {
+            return size = Height * Width;
+        }
+        public override string ToString()
+        {
+            return "Rectangle - Area -> " + size + " m2";
+        }
+    }
+    public class Square : Rectangle
     {
         public int Sidelength { get; private set; }
-        public Square(int height)
+        public Square(int sidelength) : base(sidelength, sidelength)
         {
-            Sidelength = height;
+            Sidelength = sidelength;
         }
         public int size { get; private set; }
         public override double GetArea()
@@ -26,25 +45,6 @@ namespace ConsoleApp1
         public override string ToString()
         {
             return "Square - Area -> " + size + " m2";
-        }
-    }
-    public class Rectangle : Square
-    {
-        public int Height { get; private set; }
-        public int Width { get; private set; }
-        public Rectangle(int height, int width):base(height)
-        {
-            Height = height;
-            Width = width;
-        }
-        public int size { get; private set; }
-        public override double GetArea()
-        {
-            return size =  Height * Width;
-        }
-        public override string ToString()
-        {
-            return "Rectangle - Area -> " + size + " m2";
         }
     }
     public class Circle  : Shape 
