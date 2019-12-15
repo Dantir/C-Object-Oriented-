@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP12_1_
+namespace OOP12_1_2_
 {
-    interface IInputManager
+    public interface IInputManager
     {
-        void StringFilling();
-        void NumberFilling();
+        void ReadNumber(int number);
+        int SumNumbers();
     }
 }

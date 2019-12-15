@@ -4,29 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP12_1_
+namespace OOP12_1_2_
 {
     class List: IInputManager
     {
-        private List<string> Strings = new List<string>();
-        public void StringFilling()
+        private List<int> array = new List<int>();
+        public void ReadNumber(int number)
         {
-            Console.WriteLine("Please write numbers to add to your list (write 'done' to stop)\n*Please write only numbers!");
-            string input = Console.ReadLine();
-            while (input.ToLower() != "done")
-            {
-                Strings.Add(input);
-                input = Console.ReadLine();
-            }
+            array.Add(number);
         }
-        public void NumberFilling()
+        public int SumNumbers()
         {
-            int sum = 0;
-            foreach (string element in Strings)
-            {
-                sum = sum + int.Parse(element);
-            }
-            Console.WriteLine(sum);
+            return array.Sum();
         }
     }
 }
